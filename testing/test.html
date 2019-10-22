@@ -1,0 +1,65 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>test</title>
+	
+	<script type="text/javascript">
+		function saveEdits() {
+			//get the editable element
+			var editElem = document.getElementById("edit");
+
+			//get the edited element content
+			var userVersion = editElem.innerHTML;
+
+			//save the content to local storage
+			localStorage.userEdits = userVersion;
+
+			//write a confirmation to the user
+			document.getElementById("update").innerHTML="Edits saved!";
+		}
+
+		function checkEdits() {
+			//find out if the user has previously saved edits
+			if (localStorage.userEdits!=null)
+				document.getElementById("edit").innerHTML=localStorage.userEdits;
+		}
+		
+
+		function preSets(preset) {
+			if (preset == "bg")
+			{
+				document.getElementById("edit").style.fontSize = "xx-large";
+				document.getElementById("edit").style.color = "green";
+			}
+			
+			if (preset == "sp")
+			{
+				document.getElementById("edit").style.fontSize = "large";
+				document.getElementById("edit").style.color = "pink";
+				document.getElementById("edit").style.font = "italic bold 20px arial,serif";
+			}
+		}
+	</script>
+</head>
+
+<body onload="checkEdits()">
+
+<div id="edit" contenteditable="true">
+Here is the element's original content
+</div>
+
+<input type="button" value="save my edits" onclick="saveEdits()"/>
+</br>
+</br>
+
+<select name = "dropDown" onchange="preSets(this.value)">
+	<option value="">Select a pre-set</option>
+	<option value="bg">Big green</option>
+	<option value="sp">pink</option>
+</select>
+
+<div id="update"> Edit the text and click to save for next time</div>
+
+</body>
+</html>

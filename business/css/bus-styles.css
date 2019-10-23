@@ -22,6 +22,7 @@ header
 	background-color: #000033;
 	color: #FFFFFF;
 	font-family: Georgia, Serif;
+	
 }
 
 nav
@@ -52,20 +53,20 @@ nav a:hover{
 	color: black;
 }
 
-WHY-IS-THIS-BROKEN{
-	display:flex;
-}
-
+<style>
+*{
+	box-sizing: border-box;
+	}
 
 row{
 	
 	display:flex;
-	flex-wrap:wrap;
+	/* flex-wrap:wrap; */
 }
 
 left-side{
-	float: left;
-	/* flex:30%; */
+	
+	flex:50%; 
 	background-color: #FFFFFF;
 	padding: 20px;
 	
@@ -74,12 +75,13 @@ left-side{
 
 
 right-side{
-	float: right;
-	/* flex:70%; */
+	
+	flex:50%; 
 	background-color: #FFFFFF;
 	padding: 20px;
 	
 }
+</style>
 
 /* REMOVE LATER TEST IMAGE*/
 fakeimg{
@@ -122,7 +124,6 @@ fakeimg{
 h1
 {
 	line-height: 200%;
-	background-image: url("images/sunset.jpg");
 	background-position: right;
 	background-repeat: no-repeat;
 	padding-left: 20px;

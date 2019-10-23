@@ -1,0 +1,67 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    <form method="get" enctype="application/x-www-form-urlencoded" action="/html/codes/html_form_handler.cfm"/>
+
+<p>
+<label>Name
+<input type="text" name="user_name" required="required"/>
+</label> 
+<label>Catch Phrase
+<input type="text" name="catch_phrase" required="required"/>
+</label> 
+</p>
+    <form action="myform.cgi"> <input type="file" name="fileupload" value="fileupload" id="img0"/>
+    <label for="fileupload"> Select a file to upload</label> </form>
+<fieldset>
+<legend>Give an introduction about yourself</legend>
+    <textarea rows="10" cols="200"></textarea>
+</fieldset>
+
+<fieldset>
+<legend>Extras</legend>
+<p><label> <input type="checkbox" name="extras" value="running"/> Running </label>
+<label> <input type="checkbox" name="extras" value="Cycling"/> Cycling </label>
+<label> <input type="checkbox" name="extras" value="Camping"/> Camping </label></p>
+<p><label> <input type="checkbox" name="extras" value="Collecting"/> Collecting </label>
+<label> <input type="checkbox" name="extras" value="painting"/> Painting </label>
+<label> <input type="checkbox" name="extras" value="acting"/> Acting </label></p>
+<p><label> <input type="checkbox" name="extras" value="fishing"/> Fishing </label>
+<label> <input type="checkbox" name="extras" value="teaching"/>  Teaching </label>
+<label> <input type="checkbox" name="extras" value="football"/> Football </label></p>
+<p><label> <input type="checkbox" name="extras" value="baking"/> Baking </label>
+<label> <input type="checkbox" name="extras" value="drawing"/>  Drawing </label>
+<label> <input type="checkbox" name="extras" value="basketball"/> Basketball</label></p>
+</fieldset>
+
+<fieldset>
+    <legend>Fun Photos of me</legend>
+    <form action="myform.cgi"> <input type="file" name="fileupload" value="fileupload" id="img1"/>
+    <label for="fileupload"> Select a file to upload</label> </form>
+    <form action="myform.cgi"> <input type="file" name="fileupload" value="fileupload" id="img2"/>
+    <label for="fileupload"> Select a file to upload</label> </form>
+    <form action="myform.cgi"> <input type="file" name="fileupload" value="fileupload" id="img3"/>
+    <label for="fileupload"> Select a file to upload</label> </form>
+
+</fieldset>
+<fieldset>
+    <legend>Current Interests</legend>
+    <textarea rows="10" cols="200"></textarea> Enter a few things you like, as well as a description..
+    <form action="myform.cgi"> <input type="file" name="fileupload" value="fileupload" id="img4"/>
+    <label for="fileupload"> Select a file to upload</label> </form>
+</fieldset>
+<fieldset>
+    <legend>Future Projects</legend>
+    <textarea rows="10" cols="200"></textarea> Enter a few things you're looking forward to doing in the future.. 
+    <form action="myform.cgi"> <input type="file" name="fileupload" value="fileupload" id="img5"/>
+    <label for="fileupload"> Select a file to upload</label> </form>
+    
+</fieldset>
+  <input type="submit" value="submit"/>
+</body>
+</html>

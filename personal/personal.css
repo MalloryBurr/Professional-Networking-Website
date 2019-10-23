@@ -7,6 +7,8 @@ body {
     text-align: center;
     background: #828ebb;
     color: black;
+    min-width: 700px;
+	max-width: 1024px;
     margin-right: auto;
     margin-left: auto;
 }
@@ -21,6 +23,8 @@ nav {
     background-color: #ffd800;
     padding: 5px;
     overflow: hidden;
+    min-width: 700px;
+	max-width: 1024px;
     margin-right: auto;
     margin-left: auto;
 }
@@ -43,6 +47,8 @@ nav {
     background-color: #bd7d7d;
     text-align: center;
     padding: 20px;
+    min-width: 700px;
+	max-width: 1024px;
     margin-right: auto;
     margin-left: auto;
 }

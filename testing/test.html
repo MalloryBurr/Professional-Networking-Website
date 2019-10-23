@@ -1,8 +1,10 @@
-
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-	<title>test</title>
+	<title>Templates Home</title>
+	<link href="../css/styles.css" rel="stylesheet">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta charset="utf-8">
 	
 	<script type="text/javascript">
 		function saveEdits() {
@@ -27,17 +29,22 @@
 		
 
 		function preSets(preset) {
-			if (preset == "bg")
+			if (preset == "traditional")
 			{
-				document.getElementById("edit").style.fontSize = "xx-large";
-				document.getElementById("edit").style.color = "green";
+				document.getElementById("edit").style.color = "black";
+				document.getElementById("edit").style.font = "normal 1.5em times,serif";
 			}
 			
-			if (preset == "sp")
+			if (preset == "heading")
 			{
-				document.getElementById("edit").style.fontSize = "large";
-				document.getElementById("edit").style.color = "pink";
-				document.getElementById("edit").style.font = "italic bold 20px arial,serif";
+				document.getElementById("edit").style.color = "blue";
+				document.getElementById("edit").style.font = "italic bold 2em arial,serif";
+			}
+			
+			if (preset == "subscript")
+			{
+				document.getElementById("edit").style.color = "gray";
+				document.getElementById("edit").style.font = "italic .75em arial,serif";
 			}
 		}
 	</script>
@@ -45,21 +52,37 @@
 
 <body onload="checkEdits()">
 
-<div id="edit" contenteditable="true">
-Here is the element's original content
-</div>
+	<div id="wrapper">
+		<main>
+			<header>
+				<h1>Select a template</h1>
+			</header>
+			
+			<div id="edit" contenteditable="true">
+			Here is the element's original content
+			</div>
+			
+			</br>
 
-<input type="button" value="save my edits" onclick="saveEdits()"/>
-</br>
-</br>
-
-<select name = "dropDown" onchange="preSets(this.value)">
-	<option value="">Select a pre-set</option>
-	<option value="bg">Big green</option>
-	<option value="sp">pink</option>
-</select>
-
-<div id="update"> Edit the text and click to save for next time</div>
+			<select name = "dropDown" onchange="preSets(this.value)">
+			<option value="">Select a pre-set</option>
+			<option value="traditional">Traditional</option>
+			<option value="heading">Heading</option>
+			<option value="subscript">Subscript</option>
+			</select>
+			
+			</br></br></br>
+			
+			<input type="button" value="save my edits" onclick="saveEdits()"/>
+			<div id="update"> Edit the text and click to save for next time</div>
+		</main>
+		
+		</br>
+		
+		<footer>
+			Copyright &copy; 2019 Wayne State CSC 4110</br>
+		</footer>
+	</div>
 
 </body>
 </html>
